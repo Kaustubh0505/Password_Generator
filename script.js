@@ -1,28 +1,52 @@
+function get() {
+    let a = document.getElementById("input").value;
+    return a;
+}
 
-const passwordbox=document.getElementById("password")
+const passwordbox = document.getElementById("password");
 
-let capletters="QWERTYUIOPLKJHGFDSAZXCVBNM";
-let smallletters="qwertyuiopasdfghjklzxcvbnm";
-let num="63745890312";
-let spechar="!@#$%^&*()_+=-{}[]:;.,?/><|\~"
+let capletters = "QWERTYUIOPLKJHGFDSAZXCVBNM";
+let smallletters = "qwertyuiopasdfghjklzxcvbnm";
+let num = "63745890312";
+let spechar = "!@#$%^&*()_+=-{}[]:;.,?/><|\\~";
 
 let allchars = capletters + smallletters + num + spechar;
 
-const length = 12
+function createPassword() {
+    let password = "";
+    let length = parseInt(get());
 
-function createPassword(){
-    password=""
-    password+=capletters[Math.floor(Math.random()*capletters.length)]
-    password+=smallletters[Math.floor(Math.random()*smallletters.length)]
-    password+=num[Math.floor(Math.random()*num.length)]
-    password+=spechar[Math.floor(Math.random()*spechar.length)]
-    
-    while(length > password.length){
-        password+=allchars[Math.floor(Math.random()*29)]
+    if (isNaN(length)) {
+        alert("Please enter number");
     }
-    passwordbox.value=password
+    else if(length==0){
+        alert("Number not valid");
+    }
+    else if(length<0){
+        alert("Enter positive number")
+    }
+    
 
+    else if (length >= 1) {
+        password += capletters[Math.floor(Math.random() * capletters.length)];
+    }
+    else if (length >= 2) {
+        password += smallletters[Math.floor(Math.random() * smallletters.length)];
+    }
+    else if (length >= 3) {
+        password += num[Math.floor(Math.random() * num.length)];
+    }
+    else if (length >= 4) {
+        password += spechar[Math.floor(Math.random() * spechar.length)];
+    }
+
+    while (password.length < length) {
+        password += allchars[Math.floor(Math.random() * allchars.length)];
+    }
+
+    passwordbox.value = password;
 }
+
 function copypassword(){
     passwordbox.select();
     document.execCommand("copy");

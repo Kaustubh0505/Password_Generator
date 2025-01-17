@@ -15,20 +15,6 @@ body{
     margin:100px 150px 150px 150px;    
 }
 
-.pass{
-    padding:26px 20px;
-    width:40%;
-    height:3px;
-    display: flex;
-    margin-top:50px;
-    margin-bottom:30px;
-    background-color: #fff;
-    color:#333;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 5px;
-
-}
 
 .div h1{
     font-weight: 500;
@@ -59,4 +45,43 @@ button{
     border: none;
     border-radius: 7px;
     font-size: 15px;
+}
+
+
+.pass {
+    /* margin:20px 20px; */
+    padding:20px 20px;
+    margin-top:30px;
+    width:40%;
+    height:3px;
+    display: flex;
+    margin-bottom:30px;
+    background-color: #fff;
+    color:#333;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+
+}
+
+.input{
+        padding:20px 20px;
+        margin-top:30px;
+        width:40%;
+        height:3px;
+        display: flex;
+        margin-bottom:30px;
+        background-color: #fff;
+        color:#333;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 5px;
+    
+    }
+
+.input input{
+    border: none;
+    outline:0;
+    font-size: 20px;
+    width:100%;
 }
