@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Random Password Generator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="div">
-        <h1>Generate a <br><span>random password</span></h1>
-        <div class="input">
-            <input type="text" id="input" placeholder="length of password" alt="" required>
+  <div class="container">
+    <h1>Generate a <br><span>Random Password</span></h1>
 
-            </div>
-            
-            
-            <div class="pass">
-            
-
-            <input type="text" id="password" placeholder="password" alt="">
-            <img src="image.svg" onclick="copypassword()">
-        </div>
-        <button onclick="createPassword()">Generate Password</button>
-        </div>
-
+    <div class="input">
+      <input type="number" id="input" placeholder="Length of password" required min="1">
     </div>
 
-    <script src="script.js"></script>
-    
+    <div class="pass">
+      <input type="text" id="password" placeholder="Your password" readonly>
+      <img src="image.svg" alt="Copy" onclick="copypassword()">
+    </div>
+
+    <button onclick="createPassword()">Generate Password</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
